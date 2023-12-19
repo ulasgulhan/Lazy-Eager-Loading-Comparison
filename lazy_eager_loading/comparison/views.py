@@ -1,7 +1,7 @@
 import time
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Categories, Products, Suppliers
+from .models import Categories, Products, Suppliers, OrderDetails
 
 # Create your views here.
 def index_lazy(request):
@@ -14,7 +14,7 @@ def index_lazy(request):
         elapsed_time = end_time - start_time
         total_time += elapsed_time
     average_time = total_time / num_queries
-    print(f"Lazy Loading Average Time: {average_time} seconds")
+    print(f"Lazy Loading Average Time: {average_time} seconds\nLazy Loading Elapsed Time: {elapsed_time} seconds")
     return render (request, 'lazy.html', {'products': products})
 
 
@@ -29,5 +29,5 @@ def index_eager(request):
         elapsed_time = end_time - start_time
         total_time += elapsed_time
     average_time = total_time / num_queries
-    print(f"Eager Loading Average Time: {average_time} seconds")
+    print(f"Eager Loading Average Time: {average_time} seconds\nEager Loading Elapsed Time: {elapsed_time} seconds")
     return render (request, 'eager.html', {'products': products})
