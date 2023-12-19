@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eager</title>
+</head>
+<body>
+    {% for product in products %}
+        <h1>{{product.productname}}</h1>
+        <p>{{product.supplierid.companyname}}</p>
+        <p>{{product.supplierid.contactname}}</p>
+        <p>{{product.supplierid.contacttitle}}</p>
+        <p>{{product.supplierid.phone}}</p>
+    {% endfor %}
+</body>
+</html>

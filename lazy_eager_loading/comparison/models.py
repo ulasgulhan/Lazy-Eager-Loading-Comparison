@@ -9,7 +9,7 @@ from django.db import models
 
 
 class Categories(models.Model):
-    categoryid = models.AutoField(db_column='CategoryID', primary_key=True, blank=True, null=True)  # Field name made lowercase.
+    categoryid = models.AutoField(db_column='CategoryID', primary_key=True, blank=True)  # Field name made lowercase.
     categoryname = models.TextField(db_column='CategoryName', blank=True, null=True)  # Field name made lowercase.
     description = models.TextField(db_column='Description', blank=True, null=True)  # Field name made lowercase.
     picture = models.BinaryField(db_column='Picture', blank=True, null=True)  # Field name made lowercase.
@@ -38,7 +38,7 @@ class Customerdemographics(models.Model):
 
 
 class Customers(models.Model):
-    customerid = models.TextField(db_column='CustomerID', primary_key=True, blank=True, null=True)  # Field name made lowercase.
+    customerid = models.TextField(db_column='CustomerID', primary_key=True, blank=True)  # Field name made lowercase.
     companyname = models.TextField(db_column='CompanyName', blank=True, null=True)  # Field name made lowercase.
     contactname = models.TextField(db_column='ContactName', blank=True, null=True)  # Field name made lowercase.
     contacttitle = models.TextField(db_column='ContactTitle', blank=True, null=True)  # Field name made lowercase.
@@ -65,7 +65,7 @@ class Employeeterritories(models.Model):
 
 
 class Employees(models.Model):
-    employeeid = models.AutoField(db_column='EmployeeID', primary_key=True, blank=True, null=True)  # Field name made lowercase.
+    employeeid = models.AutoField(db_column='EmployeeID', primary_key=True, blank=True)  # Field name made lowercase.
     lastname = models.TextField(db_column='LastName', blank=True, null=True)  # Field name made lowercase.
     firstname = models.TextField(db_column='FirstName', blank=True, null=True)  # Field name made lowercase.
     title = models.TextField(db_column='Title', blank=True, null=True)  # Field name made lowercase.
