@@ -6,8 +6,6 @@
     <title>Eager</title>
 </head>
 <body>
-    {% for product in products %}
-        <p>{{ product.supplierid__companyname }}</p>
-    {% endfor %}
+    <p>{{ products.supplierid__companyname }}</p>
 </body>
 </html>
